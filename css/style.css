@@ -1,6 +1,107 @@
 body {
   text-align: center;
+  font-family: 'Bungee', cursive;
+  background-color: rgb(117, 227, 232);
+color: white;
 }
+
+
+#header{
+  margin-bottom: 10px;
+}
+
+#top{
+  position: relative;
+}
+
+#left{
+  height: 800px;
+  background-color: black;
+  position:relative;
+}
+
+#scoreboard{
+  height: 220px;
+  background: black;
+  position: relative;
+}
+
+#scoreboard p{
+  font-size: 20px;
+}
+#score1, #score2{
+  font-size: 20px;
+}
+
+ #p1score{
+   background-color: green;
+   width: 135px;
+   margin-left: 30px;
+   display: inline-block;
+ }
+
+ #p2score{
+   background-color: green;
+   width: 135px;
+   margin-right: 30px;
+   margin-left: 50px;
+   display: inline-block;
+ }
+
+ #outcome{
+   height: 55px;
+   background: black;
+   margin-top: 40px;
+   color: red;
+   font-size: 25px;
+ }
+
+#ships{
+  height: 220px;
+  background-color: white;
+  position: relative;
+}
+
+#p1shipsail{
+  width: 0;
+	height: 0;
+	border-bottom: 100px solid red;
+	border-left: 100px solid transparent;
+  display: inline-block;
+  margin-top: 60px;
+}
+
+#p1shipbottom{
+  border-bottom: 100px solid red;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	height: 0;
+	width: 100px;
+  position: absolute;
+  /*transform: rotate(180deg);*/
+}
+
+#p2shipsail{
+  width: 0;
+	height: 0;
+	border-bottom: 100px solid red;
+	border-right: 100px solid transparent;
+  display: inline-block;
+  margin-left: 130px;
+  margin-top: 60px;
+}
+
+
+#water{
+  background-color: blue;
+  height: 400px;
+}
+
+#board{
+
+  height: 450px;
+}
+
 
 table {
   margin: 20px auto;
@@ -11,9 +112,10 @@ table.board {
   font-size: 50px;
 }
 
+
 .board td {
-  width: 100px;
-  height: 100px;
+  width: 175px;
+  height: 150px;
   text-align: center;
   border: 5px solid black;
   cursor: pointer;
@@ -33,4 +135,9 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+
+#ready{
+  margin-top: 5px;
 }
