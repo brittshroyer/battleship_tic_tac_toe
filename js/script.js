@@ -11,9 +11,6 @@ var winner = false;
 var currentPlayer = "X";
 var turns = 0;
 
-
-
-
 var switchPlayer = function(){
   if(currentPlayer === "X"){
     currentPlayer = "O";
@@ -68,10 +65,26 @@ $('.square').on('click', function(){
       count1++;
       $('#score1').text(count1);
       reset();
+
+      if(count1 < 3){
+        $('#p2shipbottom').removeClass("swing animated");
+        setTimeout(function(){
+          $('#p2shipbottom').addClass("swing animated");
+        }, 1500);
+      }else if(count1 >= 3){
+        $('.p2ShipPart').addClass('fadeOutDownBig');
+        $()
+      }
     }else{
       count2++;
       $('#score2').text(count2);
       reset();
+      $('#p1shipbottom').removeClass("swing animated");
+      setTimeout(function(){
+        $('#p1shipbottom').addClass("swing animated");
+      }, 1500);
+
+
     }
   }else{
     if(turns >= 9){

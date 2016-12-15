@@ -5,9 +5,12 @@ body {
 color: white;
 }
 
+h1{
+  color: black;
+}
 
 #header{
-  margin-bottom: 10px;
+  margin-bottom: 50px;
 }
 
 #top{
@@ -57,39 +60,153 @@ color: white;
  }
 
 #ships{
-  height: 220px;
+  height: 230px;
   background-color: white;
   position: relative;
 }
 
+
 #p1shipsail{
   width: 0;
 	height: 0;
-	border-bottom: 100px solid red;
-	border-left: 100px solid transparent;
+	border-bottom: 90px solid red;
+	border-left: 80px solid transparent;
   display: inline-block;
   margin-top: 60px;
 }
 
+#p1shipmast{
+  width: 5px;
+  height: 20px;
+  background-color: black;
+  display: inline-block;
+}
+
 #p1shipbottom{
-  border-bottom: 100px solid red;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	height: 0;
-	width: 100px;
-  position: absolute;
+  height: 50px;
+  width: 120px;
+  display: inline-block;
+  background-color: rgb(102, 51, 0);
+  border-radius: 0px 0px 80px 80px;
   /*transform: rotate(180deg);*/
 }
 
 #p2shipsail{
   width: 0;
 	height: 0;
-	border-bottom: 100px solid red;
-	border-right: 100px solid transparent;
+	border-bottom: 90px solid purple;
+	border-right: 80px solid transparent;
   display: inline-block;
-  margin-left: 130px;
-  margin-top: 60px;
+  margin-left: 150px;
+  margin-top: 70px;
 }
+
+#p2shipmast{
+  width: 5px;
+  height: 20px;
+  background-color: black;
+  margin-left: 225px;
+  display: inline-block;
+
+}
+
+#p2shipbottom{
+  height: 50px;
+  width: 120px;
+  display: inline-block;
+  background-color: rgb(102, 51, 0);
+  margin-left: 100px;
+  border-radius: 0px 0px 80px 80px;
+}
+
+.p1ShipPart {
+  -webkit-animation-duration: 6s;
+
+}
+
+.p2ShipPart {
+  -webkit-animation-duration: 6s;
+}
+
+#fish{
+  height: 30px;
+  width: 60px;
+  animation: swim 15s infinite;
+}
+
+#body{
+  height: 30px;
+  width: 60px;
+  background-color: orange;
+  border-radius: 50%;
+  position: relative;
+  margin-top: 80px;
+  margin-left: 10px;
+}
+
+#eye{
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  width: 7px;
+  height: 7px;
+  margin-top: 6px;
+  margin-left: 40px;
+}
+
+.fin{
+  height: 10px;
+  width: 20px;
+  background-color: orange;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 5px;
+
+}
+
+#topFin{
+  margin-top: -25px;
+  transform: rotate(45deg);
+}
+
+#bottomFin{
+  transform: rotate(-45deg);
+}
+
+@keyframes swim{
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(70px);
+  }
+  40% {
+    transform: translateX(150px);
+  }
+  60% {
+    transform: translateX(250px);
+  }
+  80% {
+    transform: translateX(275px);
+  }
+  100% {
+    transform: translateX(400px);
+  }
+
+
+}
+
+.seaWeed{
+  width: 5px;
+  height: 290px;
+  position: relative;
+  margin-left: 190px;
+  margin-bottom: 10px;
+  background-color: green;
+
+}
+
+
 
 
 #water{
