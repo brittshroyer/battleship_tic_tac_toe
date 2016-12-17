@@ -11,7 +11,7 @@
   <body>
     <div class="container">
     <div class="row" id="header">
-      <h1>Tic-Tac-Toe</h1>
+      <h1>Tic-Tac-Titanic</h1>
     </div>
 
     <div class="row" id="top">
@@ -69,17 +69,27 @@
             <div class="fin" id="bottomFin"></div>
           </div>
 
-          <div class="seaWeed"></div>
+          <div id="shark">
+            <div id="sharkBody">
+              <div id="sharkEye"></div>
+              <div class="sharkMouth"></div>
+              <div class="nose"></div>
+            </div>
+            <div class="sharkFin" id="sharkTopTail"></div>
+            <div class="sharkFin" id="sharkBottomTail"></div>
+            <div class="sharkFin" id="sharkTopFin"></div>
+            <div class="sharkFin" id="sharkSideFin"></div>
+
+
+          </div>
+
+
 
         </div>
 
 
       </div>
-
-
-
-
-      <div class="col-md-6 col-md-offset-1" id="board">
+      <div class="col-md-6 col-md-offset-2" id="board">
         <table class="board">
           <tbody>
             <tr>
@@ -99,10 +109,21 @@
             </tr>
           </tbody>
         </table>
+        <br>
+        <br>
+        <h2>Current Player: <span id="currentPlayer">1</span></h2>
       </div>
 
-
     </div>
+
+
+
+
+      <div class="gameover" id="playAgain">
+        <p>GAME OVER</p>
+        <button id="restart">Play Again</button>
+
+      </div>
 
 
 
@@ -114,6 +135,7 @@
 
 
   </div>
+  <div class="gameover" id="blackBackDrop"></div>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="js/script.js" charset="utf-8"></script>
   </body>

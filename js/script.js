@@ -11,6 +11,18 @@ var winner = false;
 var currentPlayer = "X";
 var turns = 0;
 
+$('#restart').mouseover(function(){
+  $(this).css('background-color', 'green');
+});
+
+$('#restart').mouseout(function(){
+  $(this).css('background-color', 'grey');
+});
+
+$('#restart').on('click', function(){
+  location.reload();
+});
+
 var switchPlayer = function(){
   if(currentPlayer === "X"){
     currentPlayer = "O";
@@ -51,7 +63,6 @@ var reset = function(){
 $('.square').on('click', function(){
   checkBox($(this).text());
   if(boxFull){
-      alert("Box already full!");
       switchPlayer();
   }else{
       $(this).text(currentPlayer);
@@ -70,20 +81,29 @@ $('.square').on('click', function(){
         $('#p2shipbottom').removeClass("swing animated");
         setTimeout(function(){
           $('#p2shipbottom').addClass("swing animated");
-        }, 1500);
+        }, 1400);
       }else if(count1 >= 3){
         $('.p2ShipPart').addClass('fadeOutDownBig');
-        $()
+        setTimeout(function(){
+          $('.gameover').css('display', 'block');
+        }, 2500);
       }
     }else{
       count2++;
       $('#score2').text(count2);
       reset();
-      $('#p1shipbottom').removeClass("swing animated");
-      setTimeout(function(){
-        $('#p1shipbottom').addClass("swing animated");
-      }, 1500);
 
+      if(count2 < 3) {
+        $('#p1shipbottom').removeClass("swing animated");
+        setTimeout(function(){
+          $('#p1shipbottom').addClass("swing animated");
+        }, 1400);
+      }else if(count2 >=3){
+        $('.p1ShipPart').addClass('fadeOutDownBig');
+        setTimeout(function(){
+          $('.gameover').css('display', 'block');
+        }, 2500);
+      }
 
     }
   }else{

@@ -2,12 +2,17 @@ body {
   text-align: center;
   font-family: 'Bungee', cursive;
   background-color: rgb(117, 227, 232);
-color: white;
+  color: white;
 }
 
 h1{
   color: black;
 }
+
+h2{
+  color: black;
+}
+
 
 #header{
   margin-bottom: 50px;
@@ -76,10 +81,12 @@ h1{
 }
 
 #p1shipmast{
+  position: relative;
   width: 5px;
   height: 20px;
   background-color: black;
   display: inline-block;
+  margin-top: 0;
 }
 
 #p1shipbottom{
@@ -88,6 +95,8 @@ h1{
   display: inline-block;
   background-color: rgb(102, 51, 0);
   border-radius: 0px 0px 80px 80px;
+  position: relative;
+
   /*transform: rotate(180deg);*/
 }
 
@@ -102,6 +111,7 @@ h1{
 }
 
 #p2shipmast{
+  position: relative;
   width: 5px;
   height: 20px;
   background-color: black;
@@ -131,7 +141,8 @@ h1{
 #fish{
   height: 30px;
   width: 60px;
-  animation: swim 15s infinite;
+  animation: swim 20s infinite;
+  margin-left: -100px;
 }
 
 #body{
@@ -148,8 +159,8 @@ h1{
   position: absolute;
   background-color: black;
   border-radius: 50%;
-  width: 7px;
-  height: 7px;
+  width: 5px;
+  height: 5px;
   margin-top: 6px;
   margin-left: 40px;
 }
@@ -173,50 +184,225 @@ h1{
   transform: rotate(-45deg);
 }
 
-@keyframes swim{
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(70px);
-  }
-  40% {
-    transform: translateX(150px);
-  }
-  60% {
-    transform: translateX(250px);
-  }
-  80% {
-    transform: translateX(275px);
-  }
-  100% {
-    transform: translateX(400px);
-  }
-
-
-}
-
-.seaWeed{
-  width: 5px;
-  height: 290px;
-  position: relative;
-  margin-left: 190px;
-  margin-bottom: 10px;
-  background-color: green;
-
-}
-
-
-
-
 #water{
   background-color: blue;
-  height: 400px;
+  height: 350px;
+  overflow: hidden;
 }
 
-#board{
+#shark{
+  width: 50px;
+  height: 100px;
+  margin-left: 450px;
+  animation: float 15s infinite;
+  margin-top: 23px;
 
+  position: relative;
+  /*z-index: -1;*/
+}
+
+#sharkBody{
+  width: 125px;
+  height: 40px;
+  position: relative;
+  background-color: grey;
+  border-radius: 30%;
+  margin-left: 40px;
+
+
+}
+
+#sharkEye{
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  background-color: black;
+  border-radius: 50%;
+  margin-top: 12px;
+  margin-left: 10px;
+}
+
+.sharkFin{
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 50px solid grey;
+	border-bottom: 20px solid transparent;
+  position: relative;
+  margin-left: 140px;
+}
+
+#sharkTopTail{
+  position: relative;
+  transform: rotate(-60deg);
+  margin-left: 135px;
+  margin-top: -57px;
+}
+
+#sharkBottomTail{
+  position: relative;
+  transform: rotate(40deg);
+  margin-top: -8px;
+}
+
+#sharkTopFin{
+  position: relative;
+  transform: rotate(-80deg);
+  margin-top: -90px;
+  margin-left: 85px;
+}
+
+#sharkSideFin{
+  position: relative;
+  margin-top: 18px;
+  margin-left: 70px;
+  transform: rotate(90deg)
+}
+
+.sharkMouth{
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 35px solid blue;
+	border-bottom: 8px solid transparent;
+  transform: rotate(-10deg);
+  position: absolute;
+  margin-top: 22px;
+  margin-left: -2px;
+}
+
+
+/*.nose{
+  height: 40px;
+  width: 8px;
+  background-color: blue;
+  position: absolute;
+  transform: rotate(55deg);
+  margin-top: -12px;
+  margin-left: 4px;
+}*/
+
+
+
+
+
+@keyframes swim{
+  0% {
+    transform: translateX(0px);
+  }
+  20% {
+    transform: translateX(120px);
+  }
+  40% {
+    transform: translateX(220px);
+  }
+  50% {
+    transform: translateX(250px);
+  }
+  60% {
+    transform: translateX(350px);
+  }
+  70%{
+    transform: translateX(375px);
+  }
+  85% {
+    transform: translateX(450px);
+  }
+  90% {
+    transform: translateX(535px);
+  }
+  100%{
+    transform: translateX(670px);
+  }
+}
+
+
+  @keyframes float{
+    0% {
+      transform: translateX(0px);
+    }
+    29% {
+      transform: translateX(-100px);
+    }
+    35% {
+      transform: translateX(-230px);
+    }
+    70% {
+      transform: translateX(-285px);
+    }
+    80% {
+      transform: translateX(-375px);
+    }
+    90% {
+      transform: translateX(-460px);
+    }
+    95%{
+      transform: translateX(-550px;);
+    }
+    100% {
+      transform: translateX(-650px);
+      display: none;
+    }
+}
+
+
+#blackBackDrop {
+
+  position: absolute;
+  opacity: .80;
+  height: 950px;
+  display: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0
+  bottom: 0;
+  background-color: black;
+  z-index: 5;
+
+}
+#playAgain{
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  padding: 16px;
+  border: 50px solid orange;
+  background-color: white;
+  z-index: 6;
+  overflow: auto;
+  color: black;
+  border radius: 5px;
+}
+
+#playAgain p{
+  margin-top: 65px;
+  font-size: 40px;
+}
+#restart{
+  margin-top: 20px;
+  font-size: 18px;
+  background-color: grey;
+}
+
+
+
+
+
+#board{
+  width: 450px;
   height: 450px;
+}
+
+#currentPlayer{
+  font-size: 30px;
+  margin-top: 30px;
+  color: black;
+}
+.board p{
+  font-size: 30px;
 }
 
 
