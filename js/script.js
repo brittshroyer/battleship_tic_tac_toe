@@ -12,7 +12,7 @@ var currentPlayer = "X";
 var turns = 0;
 
 $('#restart').mouseover(function(){
-  $(this).css('background-color', 'green');
+  $(this).css('background-color', 'rgb(39,249,255)');
 });
 
 $('#restart').mouseout(function(){
