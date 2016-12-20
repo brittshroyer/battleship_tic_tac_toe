@@ -86,7 +86,7 @@ $('.square').on('click', function(){
         $('.p2ShipPart').addClass('fadeOutDownBig');
         setTimeout(function(){
           $('.gameover').css('display', 'block');
-        }, 2500);
+        }, 3000);
       }
     }else{
       count2++;
@@ -102,7 +102,9 @@ $('.square').on('click', function(){
         $('.p1ShipPart').addClass('fadeOutDownBig');
         setTimeout(function(){
           $('.gameover').css('display', 'block');
-        }, 2500);
+          $('.p1ShipPart').css('display', 'none');
+        }, 3000);
+        // $('.p1ShipPart').css('display', 'none');
       }
 
     }
