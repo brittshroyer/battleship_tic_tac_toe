@@ -13,7 +13,6 @@ h2{
   color: black;
 }
 
-
 #header{
   margin-bottom: 50px;
 }
@@ -37,18 +36,19 @@ h2{
 #scoreboard p{
   font-size: 20px;
 }
+
 #score1, #score2{
   font-size: 20px;
 }
 
- #p1score{
+#p1score{
    background-color: green;
    width: 135px;
    margin-left: 30px;
    display: inline-block;
  }
 
- #p2score{
+#p2score{
    background-color: green;
    width: 135px;
    margin-right: 30px;
@@ -56,7 +56,7 @@ h2{
    display: inline-block;
  }
 
- #outcome{
+#outcome{
    height: 55px;
    background: black;
    margin-top: 40px;
@@ -70,13 +70,11 @@ h2{
   position: relative;
 }
 
-
 #p1shipsail{
   width: 0;
 	height: 0;
 	border-bottom: 90px solid red;
 	border-left: 80px solid transparent;
-  display: inline-block;
   margin-top: 60px;
 }
 
@@ -85,19 +83,15 @@ h2{
   width: 5px;
   height: 20px;
   background-color: black;
-  display: inline-block;
   margin-top: 0;
 }
 
 #p1shipbottom{
   height: 50px;
   width: 120px;
-  display: inline-block;
   background-color: rgb(102, 51, 0);
   border-radius: 0px 0px 80px 80px;
   position: relative;
-
-  /*transform: rotate(180deg);*/
 }
 
 #p2shipsail{
@@ -105,10 +99,8 @@ h2{
 	height: 0;
 	border-bottom: 90px solid purple;
 	border-right: 80px solid transparent;
-  display: inline-block;
   margin-left: 150px;
   margin-top: 70px;
-
 }
 
 #p2shipmast{
@@ -117,26 +109,19 @@ h2{
   height: 20px;
   background-color: black;
   margin-left: 225px;
-  display: inline-block;
-
 }
 
 #p2shipbottom{
   height: 50px;
   width: 120px;
-  display: inline-block;
   background-color: rgb(102, 51, 0);
   margin-left: 100px;
   border-radius: 0px 0px 80px 80px;
 }
 
-.p1ShipPart {
+.p1ShipPart, .p2ShipPart {
   -webkit-animation-duration: 6s;
-
-}
-
-.p2ShipPart {
-  -webkit-animation-duration: 6s;
+  display: inline-block;
 }
 
 #fish{
@@ -146,7 +131,7 @@ h2{
   margin-left: -100px;
 }
 
-#body{
+#fishBody{
   height: 30px;
   width: 60px;
   background-color: orange;
@@ -156,7 +141,7 @@ h2{
   margin-left: 10px;
 }
 
-#eye{
+#fishEye{
   position: absolute;
   background-color: black;
   border-radius: 50%;
@@ -166,22 +151,21 @@ h2{
   margin-left: 40px;
 }
 
-.fin{
+.fishFin{
   height: 10px;
   width: 20px;
   background-color: orange;
   border-radius: 50%;
   position: relative;
   margin-left: 5px;
-
 }
 
-#topFin{
+#fishTopFin{
   margin-top: -25px;
   transform: rotate(45deg);
 }
 
-#bottomFin{
+#fishBottomFin{
   transform: rotate(-45deg);
 }
 
@@ -197,9 +181,7 @@ h2{
   margin-left: 450px;
   animation: float 15s infinite;
   margin-top: 23px;
-
   position: relative;
-  /*z-index: -1;*/
 }
 
 #sharkBody{
@@ -209,8 +191,6 @@ h2{
   background-color: grey;
   border-radius: 30%;
   margin-left: 40px;
-
-
 }
 
 #sharkEye{
@@ -272,21 +252,6 @@ h2{
   margin-left: -2px;
 }
 
-
-/*.nose{
-  height: 40px;
-  width: 8px;
-  background-color: blue;
-  position: absolute;
-  transform: rotate(55deg);
-  margin-top: -12px;
-  margin-left: 4px;
-}*/
-
-
-
-
-
 @keyframes swim{
   0% {
     transform: translateX(0px);
@@ -317,38 +282,35 @@ h2{
   }
 }
 
-
-  @keyframes float{
-    0% {
-      transform: translateX(0px);
-    }
-    29% {
-      transform: translateX(-100px);
-    }
-    35% {
-      transform: translateX(-230px);
-    }
-    70% {
-      transform: translateX(-285px);
-    }
-    80% {
-      transform: translateX(-375px);
-    }
-    90% {
-      transform: translateX(-460px);
-    }
-    95%{
-      transform: translateX(-550px;);
-    }
-    100% {
-      transform: translateX(-650px);
-      display: none;
-    }
+@keyframes float{
+  0% {
+    transform: translateX(0px);
+  }
+  29% {
+    transform: translateX(-100px);
+  }
+  35% {
+    transform: translateX(-230px);
+  }
+  70% {
+    transform: translateX(-285px);
+  }
+  80% {
+    transform: translateX(-375px);
+  }
+  90% {
+    transform: translateX(-460px);
+  }
+  95%  {
+    transform: translateX(-550px;);
+  }
+  100%  {
+    transform: translateX(-650px);
+    display: none;
+  }
 }
 
-
-#blackBackDrop {
-
+#blackBackDrop{
   position: absolute;
   opacity: .80;
   height: 950px;
@@ -360,8 +322,8 @@ h2{
   bottom: 0;
   background-color: black;
   z-index: 5;
-
 }
+
 #playAgain{
   display: none;
   position: absolute;
@@ -382,15 +344,12 @@ h2{
   margin-top: 65px;
   font-size: 40px;
 }
+
 #restart{
   margin-top: 20px;
   font-size: 18px;
   background-color: grey;
 }
-
-
-
-
 
 #board{
   width: 450px;
@@ -402,10 +361,10 @@ h2{
   margin-top: 30px;
   color: black;
 }
+
 .board p{
   font-size: 30px;
 }
-
 
 table {
   margin: 20px auto;
@@ -415,7 +374,6 @@ table.board {
   border-collapse: collapse;
   font-size: 50px;
 }
-
 
 .board td {
   width: 175px;
@@ -440,7 +398,6 @@ table.board {
 .board tr:last-child td {
   border-bottom: none;
 }
-
 
 #ready{
   margin-top: 5px;
