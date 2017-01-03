@@ -11,7 +11,7 @@ $( document ).ready(function() {
   var currentPlayer = "X";
   var turns = 0;
 
-  // Restart game event handlers
+  // Restart game 
 
   $('#restart').mouseover(function(){
     $(this).css('background-color', 'rgb(39,249,255)');
